@@ -11,10 +11,9 @@ class CategorySerializer(serializers.ModelSerializer):
         
         
 class ItemSerializer(serializers.ModelSerializer):
-    category = serializers.SerializerMethodField()
     class Meta:
         model = ItemModel
-        fields = ["name", "category", "image_url"]
+        fields = ["name", "category", "image_url", "category_id"]
         
         
 class OrderSerializer(serializers.ModelSerializer):
